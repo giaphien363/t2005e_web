@@ -3,6 +3,9 @@ body{
     background-repeat: repeat;/*lap */
     background-size: cover;
     background-color: aquamarine; /*mau nen */
+    margin-top: 50px;/* border top */
+    margin-left: 200px ;/* border left */
+    margin-right: 300px;/* border right */
 }
 h1{
     color: red;
