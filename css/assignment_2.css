@@ -6,6 +6,10 @@ body {
     margin-right: 300px;
 }
 
+h5{
+    text-align: right;
+}
+
 p.title{
     text-decoration: underline;
     font-weight: bold;
@@ -14,4 +18,10 @@ p.title{
 }
 hr{
     color: red;
+}
+
+img {
+    position: static;
+    width: 100px;
+    height: auto;
 }
