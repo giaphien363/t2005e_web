@@ -1,0 +1,25 @@
+body{
+    background-image: url("../imgs/baelen.jpg") ;
+    background-repeat: repeat;/*lap */
+    background-size: cover;
+    background-color: aquamarine; /*mau nen */
+}
+h1{
+    color: red;
+    text-shadow: 5px 3px 5px black;/*bong chu*/
+
+}
+p{
+    color: orange;
+    font-size: 20px;/* do cao chu*/
+    line-height: 1.5;/*độ cao dong */
+    text-align: justify;/*căn chữ trái(left) phải(right) giữa(center) đều */
+    font-family: sans-serif;/*font chữ*/
+    font-weight: 400;/* 100 200 300 400(normal) 500 600 700(bold) 800 900 đậm nhạt */
+    text-decoration: none;/* gạch chân(underline)- gạch ngang(line through) gạch trên(overline) none(xóa)*/
+    text-indent: 20px;/* lui dong dau tien */
+    word-spacing: 2px;/*khoang canh chu*/
+    text-transform: uppercase;/*viet hoa lowercase(viet thuong) capitalline(viet hoa chu dau) none*/
+    background-color: gray;/*nen chu*/
+
+}

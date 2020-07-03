@@ -1,0 +1,17 @@
+body {
+    font-size: 20px;
+    line-height: 1,5;
+    margin-top: 50px;
+    margin-left: 200px ;
+    margin-right: 300px;
+}
+
+p.title{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    color: orangered;
+}
+hr{
+    color: red;
+}
