@@ -12,7 +12,7 @@ body {
     margin-right: 150px;
     background-color: white;
     /*border: 1px dashed #ff000060;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 
 }
 #div1{
@@ -30,7 +30,7 @@ body {
     padding-left: 20px;
     margin-left: 20px;
     margin-top: -90px;
-    height: 788px;
+    height: 770px;
     background-color: rgb(219, 212, 212);
 }
 #div3{
@@ -41,10 +41,10 @@ body {
 
 }
 
-div img{
-    padding-left: 66px;
+div img {
+    /*padding-left: 66px;*/
     max-width: 100%;
     max-height: 100%;
     display: block;/* none */
-
+    border-radius: 150px;
 }
