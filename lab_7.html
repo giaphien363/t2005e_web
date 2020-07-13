@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab s7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lbs/fontawesome/css/all.css"/>
+    <link href="css/lab_7.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+        <form method="post" action="#">
+            <div class="top">
+                <div class="left">
+                    <div class="text">
+                        <p>Billing address</p>
+                    </div>
+                    <div class="box-in">
+                        <label><i class="fas fa-user"></i>&ensp;&ensp;Full name</label>
+                        <input type="text" name="fullname" placeholder="Giap Van Hien" required/>
+                    </div>
+                    <div class="box-in">
+                        <label><i class="fas fa-envelope"></i>&ensp;&ensp;Email</label>
+                        <input type="email" name="Email" placeholder="Example@gmail.com" required/>
+                    </div>
+                    <div class="box-in">
+                        <label><i class="far fa-address-card"></i>&ensp;&ensp;Address</label>
+                        <input type="tel" name="Address" placeholder="8 ttt hn"/>
+                    </div>
+                    <div class="box-in">
+                        <label><i class="fas fa-university"></i>&ensp;&ensp;City</label>
+                        <input type="text" name="City" placeholder="New York"/>
+                    </div>
+                    <div class="box-in">
+                        <div class="zip-left">
+                            <label>State</label>
+                            <input type="text" name="State" placeholder="Ny">
+                        </div>
+                        <div class="zip-right">
+                            <label>Zip</label>
+                            <input type="number" name="Zip" placeholder="100123" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <div class="text">
+                        <p>Payment</p>
+                    </div>
+                    <div class="box-in">
+                        <span>Accepted Cards</span>
+                        <img src="imgs/accept-all-credit-cards-clipart-3.jpg"/>
+                    </div>
+                    <div class="box-in">
+                        <label>Name on Card</label>
+                        <input type="text" name="namecard" placeholder="Joe more"/>
+                    </div>
+                    <div class="box-in">
+                        <label>Credit Card number</label>
+                        <input type="number" name="credit" placeholder="111-333-555-3333"/>
+                    </div>
+                    <div class="box-in">
+                        <label>Exp Month</label>
+                        <input list="Month"  name="month" placeholder="Jun"/>
+                        <datalist id="Month">
+                            <option value="Jan">
+                            <option value="Feb">
+                            <option value="Mar">
+                            <option value="Apr">
+                            <option value="May">
+                            <option value="Jun">
+                            <option value="Jul">
+                            <option value="Aug">
+                            <option value="Sep">
+                            <option value="Oct">
+                            <option value="Nov">
+                            <option value="Dec">
+                        </datalist>
+                    </div>
+                    <div class="box-in">
+                        <div class="zip-left">
+                            <label>Exp year</label>
+                            <input type="number" name="year" placeholder="2020" min="2010" max="2025">
+                        </div>
+                        <div class="zip-right">
+                            <label>CVV</label>
+                            <input type="number" name="CVV" placeholder="362">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox"/>
+                <label> Shipping address same as billing</label>
+            </div>
+            <div class="button">
+                <button type="submit">continue to checkout</button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
