@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment 8</title>
+</head>
+<body>
+<script type="text/javascript">
+    // alert(" welcome to Vietlot");
+
+    // creat 5number random
+    do{
+        var r = Math.random()*100;
+        r = parseInt(r);
+        var r1 = Math.random()*100;
+        r1 = parseInt(r1);
+        var r2 = Math.random()*100;
+        r2 = parseInt(r2);
+        var r3 = Math.random()*100;
+        r3 = parseInt(r3);
+        var r4 = Math.random()*100;
+        r4 = parseInt(r4);
+    }while(r==r1 || r == r2 || r ==r3 ||r==r4 ||
+        r1==r2|| r1==r3 || r1==r4||
+        r2==r3 || r2==r4 || r3==r4 );
+    console.log(r);
+    console.log(r1);
+    console.log(r2);
+    console.log(r3);
+    console.log(r4);
+
+    // prompt 5 number
+    var arr=[];
+    do{
+        for (var i=0;i<5;i++){
+            arr[i] = prompt( "pick lucky number");
+            arr[i] = parseInt(arr[i]);
+            console.log(arr[i]);
+        };
+    }while( isNaN(arr[0]) ||isNaN(arr[1]) ||isNaN(arr[2]) ||isNaN(arr[3]) ||isNaN(arr[4]) ||
+    arr[0]==arr[1] || arr[0]==arr[2] || arr[0]== arr[3] || arr[0]==arr[4] ||
+        arr[1]==arr[2] || arr[1]==arr[3] || arr[1]==arr[4] ||
+        arr[2]== arr[3] || arr[2]== arr[4] || arr[3]==arr[4]);
+
+    // compare
+    var c=0;
+    for(var i=0;i<5;i++){
+        if(arr[i] == r){
+            c++;
+        }
+        if(arr[i] == r1){
+            c++;
+        }
+        if(arr[i] == r2){
+            c++;
+        }
+        if(arr[i] == r3){
+            c++;
+        }
+        if(arr[i] == r4){
+            c++;
+        }
+    };
+
+    // console.log(c);
+    if(c == 5 ){
+        alert(" Congrat !!! you have $5m");
+    }else if(c == 4){
+        alert("you have $1m");
+    }else if(c == 3){
+        alert("you have $0.5m");
+    }else if(c == 2){
+        alert("you have $10k");
+    }else if(c == 1){
+        alert("you have $1k");
+    }else if(c == 0){
+        alert("i hope you lucky next time !!!");
+    };
+</script>
+</body>
+</html>
