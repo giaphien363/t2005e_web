@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo object</title>
+</head>
+<body>
+
+<h1 id="sv-name">full name: </h1>
+<h2 id="mssv">mssv: </h2>
+<h3 id="tel"> SDT :</h3>
+<h4 id="add">Dia chi :</h4>
+<h4 id="girlfriend">ten ban gai : </h4>
+<h4 id="vetinh">danh sach ve tinh cua ban gai : </h4>
+<ol id="listvt" >
+<!--    <li>nguyen thanh dong</li>-->
+<!--    <li>nguyen thanh dong</li>-->
+<!--    <li>nguyen thanh dong</li>-->
+<!--    <li>nguyen thanh dong</li>-->
+</ol>
+
+<script type="text/javascript">
+    var sv_nam={
+        name:"giap van hien",
+        mssv: "1234",
+        tel:"09888888",
+        add:"8 ton that thuyet",
+        girlfriend:{
+            girlfriend_name:"ngoc trinh",
+            girlfriend_tel:"012333333",
+            girlfriend_add:"ha noi",
+            vetinh:[
+                {
+                    name:"nguyen thanh dong",
+                    tel:"098484844",
+                    loaixe:"ba gac",
+                    gift:function () {
+                        console.log("tang keo");
+                    },
+                },
+                {
+                    name:"nguyen thanh dong",
+                    tel:"098484844",
+                    loaixe:"ba gac",
+                    gift:function () {
+                        console.log("tang keo");
+                    },
+                },
+                {
+                    name:"nguyen thanh dong",
+                    tel:"098484844",
+                    loaixe:"ba gac",
+                    gift:function () {
+                        console.log("tang keo");
+                    },
+                },
+                {
+                    name:"nguyen thanh dong",
+                    tel:"098484844",
+                    loaixe:"ba gac",
+                    gift:function () {
+                        console.log("tang keo");
+                    },
+                },
+            ],
+            nhantin:function () {
+                console.log(this.girlfriend_name+"nhan tin voi zai");
+            },
+            makeup:function () {
+                console.log(this.girlfriend_name+"makeup luc 8am");
+            }
+        },
+        ghen:function () {
+            console.log(this.name+"kick ");
+        },
+        dichoi:function () {
+            console.log(this.name+"nam tay");
+        }
+    }
+
+    var h1 = document.getElementById("sv-name"); //lay ra
+    h1.innerText += " "+sv_nam.name ;
+
+    document.getElementById("mssv").innerText += "  "+sv_nam.mssv;
+    document.getElementById("tel").innerText += "  "+sv_nam.tel;
+    document.getElementById("add").innerText += " "+sv_nam.add;
+    document.getElementById("girlfriend").innerText +=""+sv_nam.girlfriend.girlfriend_name ;
+
+
+     var vetinhs = sv_nam.girlfriend.vetinh;
+     var ol_html=document.getElementById("listvt");
+     vetinhs.map(function (n) {
+          var li_html = "<li>" + n.name+"loai xe :"+n.loaixe+"</li>";
+          ol_html.innerHTML+= li_html;
+     })
+
+</script>
+</body>
+</html>
