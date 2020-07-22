@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment 10</title>
+    <link rel="stylesheet" href="css/assignment_10.css"/>
+    <link rel="stylesheet" href="lbs/fontawesome/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="tittle">
+        <h2>Shop Page</h2>
+        <a href="#">Home</a>
+    </div>
+</header>
+<section class="section">
+    <div class="container" id="container">
+    </div>
+</section>
+<!--js-->
+<script type="text/javascript">
+    var items =[
+        {
+            image :"imgs/assignment-10/product-5.jpg",
+            name:"Fila Locker Room Varsity Jacket",
+            price:"$13",
+            stock:"333 In Stock"
+        },
+        {
+            image :"imgs/assignment-10/product-8.jpg",
+            name:"Juicy Couture Tricot Logo Stripe Jacket",
+            price:"$12",
+            stock:"298 In Stock"
+        },
+        {
+            image :"imgs/assignment-10/product-18.jpg",
+            name:"New Balance Fresh Foam LAZR V1 Sport",
+            price:"$23",
+            stock:"456 In Stock"
+        },
+        {
+            image :"imgs/assignment-10/product-22.jpg",
+            name:"Madden By Steve Madden Cale 6",
+            price:"$36",
+            stock:"423 In Stock"
+        },
+    ];
+    items.map(function (n) {
+        var abc = "<div class=\"box-details\">\n" +
+            "                <h4>New</h4>\n" +
+            "                <div class=\"image\">\n" +
+            "                    <img src=\""+n.image+"\"/>\n" +
+            "                </div>\n" +
+            "                <div class=\"detail-product\">\n" +
+            "                    <div class=\"box\">\n" +
+            "                        <a href=\"#\"><span>GRAPHIC CORNER</span></a>\n" +
+            "                        <div class=\"box-text\">\n" +
+            "                            <a href=\"#\"><h3>"+n.name+"</h3></a>\n" +
+            "                            <div class=\"rate-star\">\n" +
+            "                                <i class=\"fas fa-star\"></i>\n" +
+            "                                <i class=\"fas fa-star\"></i>\n" +
+            "                                <i class=\"fas fa-star\"></i>\n" +
+            "                                <i class=\"fas fa-star\"></i>\n" +
+            "                                <i class=\"fas fa-star\"></i>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"price\">\n" +
+            "                                <p>"+n.price+"</p>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"description\">\n" +
+            "                                <p>Create a cool and sporty look with the FILA® Locker Room Varsity Jacket. </br>\n" +
+            "\n" +
+            "                                    Comfortable cotton-blend fabrication. </br>\n" +
+            "\n" +
+            "                                    Classic varsity jacket features brand details throughout. </br>\n" +
+            "\n" +
+            "                                    Flat knit collar.</p>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"stock\">Availability: <span>"+n.stock+"</span></div>\n" +
+            "                        </div>\n" +
+            "                        <div class=\"to-cart\">\n" +
+            "                            <div class=\"left\"><a href=\"#\">ADD TO CART</a></div>\n" +
+            "                            <div class=\"right\">\n" +
+            "                                <a href=\"#\"><i class=\"fas fa-random\"></i></a>\n" +
+            "                                <a href=\"#\"><i class=\"far fa-heart\"></i></a>\n" +
+            "                            </div>\n" +
+            "                        </div>\n" +
+            "                    </div>\n" +
+            "                </div>\n" +
+            "        </div>";
+        document.getElementById("container").innerHTML += abc;
+    });
+</script>
+</body>
+</html>
