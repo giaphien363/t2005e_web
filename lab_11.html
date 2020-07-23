@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab 11</title>
+    <link rel="stylesheet" href="css/lab_11.css"/>
+</head>
+<body>
+<section class="section">
+    <h2>Xác định vị trí trong Tabs</h2>
+    <div class="button">
+        <button type="button" class="active" onclick="tabs(this,'a1')" >Home</button>
+        <button type="button" onclick="tabs(this,'a2')">Profile</button>
+        <button type="button" onclick="tabs(this,'a3')">Messages</button>
+        <button type="button" onclick="tabs(this,'a4')">Settings</button>
+    </div>
+    <div class="panel">
+        <p id="a1" class="active" >this is home
+            Chú rể 76 tuổi cưới cô dâu 44 tuổi, sống chung 17
+            năm vẫn bị nhầm là bố con</p>
+        <p id="a2">this is profile
+            Khoảng cách tuổi tác lên tới 32 tuổi, cặp đôi đũa
+            lệch này thừa nhận không dám hôn nhau ở nơi công cộng và
+            luôn bị nhầm là bố con.</p>
+        <p id="a3">this is messages </p>
+        <p id="a4">this is settings </p>
+    </div>
+</section>
+
+ <script type="text/javascript">
+   function tabs(e,panel){
+    // button : remove class act, sau do click e nao thi e do add class act
+    var button = document.querySelectorAll("button");
+    for(var n of button){
+        n.className = n.className.replace("active","");
+    };
+    e.classList.add("active");
+    // panel : duyet collection panel cho display :none ,
+    // sau do cho panel tuong ung voi button display: block.
+    var n=document.querySelectorAll(".section p");
+    for(var e of n){
+       e.style.display= "none";
+     };
+    document.getElementById(panel).style.display = "block";
+   };
+
+var p_display= document.getElementsByClassName("active");
+for(var e of p_display){
+    e.style.display = "inline";
+};
+</script>
+</body>
+</html>

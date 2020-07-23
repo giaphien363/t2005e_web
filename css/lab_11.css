@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ffffff;
+    font-size: 18px;
+    color: #999999;
+    word-spacing: 6px;
+}
+.section{
+    margin: 100px;
+    padding: 20px;
+    /*border: 1px solid red;*/
+    width: 500px;
+    height: 300px;
+}
+.section::after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+.section h2{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: #a1a1a1 solid 1px;
+}
+.section .button{
+    float: left;
+    width: 30%;
+}
+.section .button button{
+    float: left;
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    padding:15px 0;
+    margin-bottom: 5px;
+    background: #a1a1a1;
+}
+.section .button .active{
+    background: #4fb68d;
+}
+.section .panel{
+    float: left;
+    width: 69%;
+    padding-left: 20px;
+    text-align: center;
+}
+.section p{
+    display: none;
+}
