@@ -43,6 +43,9 @@ body{
     margin-bottom: 5px;
     background: #a1a1a1;
 }
+.section .button button:hover{
+    background: #4fb68d;
+}
 .section .button .active{
     background: #4fb68d;
 }
