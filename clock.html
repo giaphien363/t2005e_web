@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <link rel="stylesheet" href="css/clock.css"/>
+</head>
+<body>
+<!--đồng hồ điện tử-->
+<div class="clock1">
+    <input type="number" name="time"/>
+    <button type="button" onclick="start()">ok</button>
+    <h2><span class="min">00</span>: <span class="sec">00</span></h2>
+</div>
+<!--đồng hồ kim-->
+<div class="clock2">
+    <h1 class="top">12</h1>
+    <h1 class="right">3</h1>
+    <h1 class="bottom">6</h1>
+    <h1 class="left">9</h1>
+
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+</div>
+
+<script type="text/javascript" src="JS/jquery.js"></script>
+<!--dong ho dtu-->
+<script type="text/javascript">
+    var timer;
+    function start() {
+    var min =$("input[name=time]").val();
+    min=parseInt(min);
+    min = (isNaN(min) || min<=0 )?10:min;
+    var sec =0;
+    clearInterval(timer);
+
+    timer=setInterval(function () {
+        //in len html
+     $(".min").text(min<10?"0"+min:min);
+     $(".sec").text(sec<10?"0"+sec:sec);
+
+     //thay doi thoi gian
+        sec--;
+        console.log(sec);
+        if(sec<0){
+            min--;
+            sec=59;
+        }
+        if(min<0) clearInterval(timer);
+    },1000);
+    };
+
+</script>
+<!--dong ho kim-->
+<script type="text/javascript">
+    setInterval(function () {  // arrow function
+        var d=new Date();
+        var s=d.getSeconds();
+        var m=d.getMinutes();
+        var h=d.getHours();
+        var sp=s*6; // sec = (1/60) *360
+        var mp=(m+s/60)*6; // min =( 1/60*60) *360
+        var hp=(h+m/60)*30; //hour = (1/3600 *12) *360
+        $(".hour").css("transform","rotate("+hp+"deg)");
+        $(".minute").css("transform","rotate("+mp+"deg)");
+        $(".second").css("transform","rotate("+sp+"deg)");
+
+    });
+
+</script>
+
+</body>
+</html>

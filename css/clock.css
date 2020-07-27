@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+}
+.clock1{
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+}
+.clock1::after{
+    visibility: hidden;
+    content: ".";
+    clear: both;
+}
+.clock1 button{
+    padding: 3px 15px;
+}
+.clock1 h2{
+    margin-top: 20px;
+}
+.clock2{
+    width: 480px;
+    height: 480px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #7f7979;
+    border-radius:30% ;
+    /*background: url("../imgs/clock/frame.png");*/
+}
+.clock2 h1{
+    font-size: 40px;
+}
+.top{
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left:-15px ;
+}
+.right{
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+.bottom{
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left:-15px ;
+}
+.left{
+    padding-left: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+.clock2 div{
+    position: absolute;
+    width: 480px;
+    height: 480px;
+}
+.hour{
+    background: url("../imgs/clock/hour.png");
+}
+.minute{
+    background: url("../imgs/clock/minute.png");
+}
+.second{
+    background: url("../imgs/clock/second.png");
+
+}
